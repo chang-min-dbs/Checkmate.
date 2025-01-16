@@ -1,0 +1,40 @@
+{
+    "members": [
+      {
+        "memName": "장효영",
+        "memId": "hyjang",
+        "memPw": "12341234"
+      },
+      {
+        "memName": "홍길동",
+        "memId": "hong1234",
+        "memPw": "12341234"
+      },
+      {
+        "id": "5f72",
+        "memName": "d",
+        "memId": "s",
+        "memPw": "s"
+      },
+      {
+        "id": "9f0d",
+        "memName": "s",
+        "memId": "ff",
+        "memPw": "aaa"
+      }
+    ],
+    "review": [
+      {
+        "memName": "장효영",
+        "memId": "hyjang",
+        "day": "2024-05-32",
+        "content": "잘 보고 갑니다."
+      },
+      {
+        "memName": "홍길동",
+        "memId": "hong1234",
+        "day": "2024-05-32",
+        "content": "항상 행복하세요."
+      }
+    ]
+  }

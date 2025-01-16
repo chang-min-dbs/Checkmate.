@@ -1,0 +1,111 @@
+/* 전체 화면 중앙 정렬을 위한 기본 설정 */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f5f7;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* AuthForm의 스타일 */
+  .AuthForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+  }
+  
+  /* 폼 스타일 */
+  form {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 90%; /* 반응형을 고려하여 수정 */
+    max-width: 350px; /* 최대 너비 설정 */
+    text-align: center;
+  }
+  
+  /* 입력 필드 및 버튼의 공통 스타일 */
+  input, button {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: border-color 0.3s, background-color 0.3s ease;
+  }
+  
+  /* 입력 필드 스타일 */
+  input {
+    border: 1px solid #ddd;
+  }
+  
+  input:focus {
+    border-color: #ffa500;
+  }
+  
+  /* 버튼 스타일 */
+  button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* 오류 메시지 스타일 */
+  .error {
+    color: red;
+    font-size: 12px;
+    margin-top: -8px;
+    margin-bottom: 8px;
+    display: block;
+    text-align: left;
+    padding-left: 20px;
+  }
+  
+  /* 링크 스타일 */
+  .links {
+    margin-top: 15px;
+  }
+  
+  .links a {
+    color: #007bff;
+    text-decoration: none;
+    font-size: 14px;
+    display: inline; /* 인라인으로 설정하여 한 줄에 배치 */
+  }
+  
+  .separator {
+    margin: 0 5px; /* 링크 사이의 간격 */
+  }
+  
+  .links a:hover {
+    text-decoration: underline;
+  }
+  
+  /* 로그인 화면으로 돌아가기 링크 스타일 */
+  .back-link {
+    display: block; /* 블록으로 설정하여 한 줄로 표시 */
+  }
+  
+  /* 반응형 디자인을 위한 미디어 쿼리 */
+  @media (max-width: 480px) {
+    form {
+      width: 95%; /* 작은 화면에서의 너비 조정 */
+    }
+  
+    input, button {
+      font-size: 16px; /* 작은 화면에서 폰트 크기 조정 */
+    }
+  }
