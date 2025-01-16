@@ -14,7 +14,7 @@ export default function TodoHeader() {
         <div className={styles["todo-header"]}>
             <div className={styles.left}></div>
             <div className={styles.center}>
-                <span>Check List</span>
+                <span>CheckMate!</span>
                 <GiNotebook />
             </div>
             <div className={styles.right}>
