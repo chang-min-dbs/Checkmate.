@@ -22,19 +22,30 @@ function SignupForm({ switchForm, setErrors }: Props) {
     return '';
   };
 
-  const handleSignup = () => {
-    const existingUsers = JSON.parse(localStorage.getItem('users') || '[]');
-    const userExists = existingUsers.some((user: any) => user.email === formData.email);
+  const handleSignup = async () => {
+    const response = await fetch('http://localhost:8080/api/member/save', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+            memberEmail: formData.email,
+            memberPassword: formData.password,
+            memberName: formData.name,
+            memberPhone: formData.phone,
+            // 비밀번호 확인은 필요하지 않음
+        }),
+    });
 
-    if (userExists) {
-      alert('이미 사용 중인 이메일입니다.');
-      return;
+    if (response.ok) {
+        alert('회원가입이 완료되었습니다!');
+        switchForm('login');
+    } else {
+        const errorMessage = await response.text();
+        alert(`회원가입에 실패했습니다: ${errorMessage}`);
     }
+};
 
-    localStorage.setItem('users', JSON.stringify([...existingUsers, formData]));
-    alert('회원가입이 완료되었습니다!');
-    switchForm('login');
-  };
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
